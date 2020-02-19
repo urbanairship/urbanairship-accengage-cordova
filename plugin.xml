@@ -16,6 +16,17 @@
                 <param name="ios-package" value="urbanairship-accengage-cordova" />
             </feature>
         </config-file>
+        
+        <!-- Airship library -->
+        <podspec>
+            <config>
+                <source url="https://github.com/CocoaPods/Specs.git"/>
+            </config>
+            <pods use-frameworks="true">
+                <pod name="Airship/Accengage" spec="13.1.0" />
+            </pods>
+        </podspec>
+        
     </platform>
     
     <platform name="android">
