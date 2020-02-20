@@ -10,6 +10,7 @@
     <keywords>cordova,urbanairship</keywords>
     <repo>https://github.com/urbanairship/urbanairship-accengage-cordova.git</repo>
     
+    <!-- ios -->
     <platform name="ios">
         <config-file parent="/*" target="config.xml">
             <feature name="urbanairship-accengage-cordova">
@@ -29,6 +30,7 @@
         
     </platform>
     
+    <!-- android -->
     <platform name="android">
         <config-file parent="/*" target="res/xml/config.xml">
             <feature name="urbanairship-accengage-cordova">
@@ -37,6 +39,12 @@
         </config-file>
         <config-file parent="/*" target="AndroidManifest.xml">
         </config-file>
+        
+        <framework
+        custom="true"
+        src="src/android/build-extras.gradle"
+        type="gradleReference"/>
+        
     </platform>
     
 </plugin>
