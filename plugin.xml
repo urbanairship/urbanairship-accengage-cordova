@@ -34,7 +34,7 @@
     <platform name="android">
         <config-file parent="/*" target="res/xml/config.xml">
             <feature name="UAirshipPlugin">
-                <param name="android-package" value="com.urbanairship-accengage.cordova.UAirshipPlugin"/>
+                <param name="android-package" value="com.urbanairship.accengage-cordova.UAirshipPlugin"/>
             </feature>
         </config-file>
         <config-file parent="/*" target="AndroidManifest.xml">
