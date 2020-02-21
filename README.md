@@ -6,7 +6,6 @@ This plugin supports Cordova apps running on both iOS and Android.
 
 Please visit http://support.urbanairship.com/ for any issues integrating or using this plugin.
 
-
 ### Requirements:
  - cordova >= 9.0.0
  - cordova-ios >= 5.0.1
