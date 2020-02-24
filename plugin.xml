@@ -10,6 +10,13 @@
     <keywords>cordova,urbanairship</keywords>
     <repo>https://github.com/urbanairship/urbanairship-accengage-cordova.git</repo>
     
+    <engines>
+        <engine name="cordova" version=">=9.0.0"/>
+        <engine name="cordova-ios" version=">=5.0.1"/>
+        <engine name="cococapods" version=">=1.7.3"/>
+        <engine name="urbanairship-cordova" version=">=13.1.0"/>
+    </engines>
+    
     <!-- ios -->
     <platform name="ios">
         <config-file parent="/*" target="config.xml">
