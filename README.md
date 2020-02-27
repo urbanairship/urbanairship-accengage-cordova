@@ -10,7 +10,7 @@ Please visit http://support.urbanairship.com/ for any issues integrating or usin
  - cordova >= 9.0.1
  - cordova-ios >= 5.0.1
  - cococapods >= 1.7.3
- - urbanairship-cordova >= 10.0.0
+ - urbanairship-cordova >= 10.1.0
 
 #### iOS:
 - Xcode 11+
