@@ -10,22 +10,59 @@
     <keywords>cordova,urbanairship</keywords>
     <repo>https://github.com/urbanairship/urbanairship-accengage-cordova.git</repo>
     
+    <engines>
+        <engine name="cordova-android" version=">=4.1.0"/>
+        <engine name="cordova-ios" version=">=5.0.1"/>
+        <engine name="cordova" version=">=9.0.1"/>
+        <engine name="urbanairship-cordova" version=">=10.1.0" platform="ios|android" scriptSrc=""/>
+    </engines>
+    
+    <!-- ios -->
     <platform name="ios">
+        
+        <config-file target="*-Info.plist" parent="UACordovaPluginVersion">
+            <string>1.0.0</string>
+        </config-file>
+        
         <config-file parent="/*" target="config.xml">
-            <feature name="urbanairship-accengage-cordova">
-                <param name="ios-package" value="urbanairship-accengage-cordova" />
+            <feature name="UAirship">
+                <param name="ios-package" value="UAirshipPlugin" />
+                <param
+                    name="onload"
+                    value="true"/>
             </feature>
         </config-file>
+        
+        <!-- Airship library -->
+        <podspec>
+            <config>
+                <source url="https://github.com/CocoaPods/Specs.git"/>
+            </config>
+            <pods use-frameworks="true">
+                <pod name="Airship/Accengage" spec="13.1.0" />
+            </pods>
+        </podspec>
+        
     </platform>
     
+    <!-- android -->
     <platform name="android">
         <config-file parent="/*" target="res/xml/config.xml">
-            <feature name="urbanairship-accengage-cordova">
-                <param name="android-package" value="urbanairship-accengage-cordova.urbanairship-accengage-cordova" />
+            <feature name="UAirship">
+                <param name="android-package" value="com.urbanairship.accengage-cordova.UAirshipPlugin"/>
+                <param
+                    name="onload"
+                    value="true"/>
             </feature>
         </config-file>
         <config-file parent="/*" target="AndroidManifest.xml">
         </config-file>
+        
+        <framework
+        custom="true"
+        src="src/android/build-extras.gradle"
+        type="gradleReference"/>
+        
     </platform>
     
 </plugin>
